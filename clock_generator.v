@@ -11,7 +11,7 @@ wire clk_div2, clk_div5, clk_div2_5, clk_mul_2;
 div_2 d0 (clk_in, ~(en[1]|en[0]), rst, clk_div2);
 div_5 d1 (clk_in, (~en[1])&en[0], rst, clk_div5);
 div_2_5 d2 (clk_in, en[1]&(~en[0]), rst, clk_div2_5);
-//mul_2 d3 (clk_in, en[1]&en[0], rst, clk_mul_2);
+mul_2 d3 (clk_in, en[1]&en[0], rst, clk_mul_2);
 always @(*)
 begin
 case(en)
